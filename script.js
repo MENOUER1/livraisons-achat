@@ -1,51 +1,53 @@
-"use strict";
+"usestrict";
 
+const input = document.querySelector("input");
 const button = document.querySelector("button");
-
-const imput  = document.querySelector("imput")
-
 const ul = document.querySelector("ul");
+let li;
 
-let li = document.getElementByNameli("li")
 
+// creation des variables
 
-function createElementLi() {
+function CreateElementLi() {
     li = document.createElement('li');
 }
-function addInputValueinLi() {
+
+
+function ClearInput() {
+    input.value = "";
+}
+
+
+function GetInputValueEnter(key) {
+    if (key.keyCode === 13) {
+        addItemOnMyTodo();
+    }
+}
+
+
+
+
+function InsertLiInUL() {
+    ul.insertAdjacentElement('beforeend', li);
+}
+
+
+function AddValueinLi() {
     li.append(document.createTextNode(input.value));
 }
 
-function insertLi() {
-    ul.insertAdjacentElement("beforeend", li);
+
+
+// creation des fonctions
+
+function addItemOnMyTodo() {
+
+    CreateLi();
+    AddValueinLi();
+    InsertLiInUL();
+    ClearInput();
 }
+ // creation et cablage de la fonction globale
 
-
-
-
-function resetinput() { input => 0
-    
-}
-    
-
-
-
-    function addImputElement
-
-    li.append(document.createTextNode(imput.value));
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+button.addEventListener("click", addIteOnMyTodo);
+input.addEventListener("keypress", getInputValueEnter);
