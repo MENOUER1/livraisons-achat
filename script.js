@@ -12,7 +12,9 @@ let li = document.getElementByNameli("li")
 function createElementLi() {
     li = document.createElement('li');
 }
-
+function addInputValueinLi() {
+    li.append(document.createTextNode(input.value));
+}
 
 function insertLi() {
     ul.insertAdjacentElement("beforeend", li);
