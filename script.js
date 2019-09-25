@@ -49,5 +49,5 @@ function addItemOnMyTodo() {
 }
  // creation et cablage de la fonction globale
 
-button.addEventListener("click", addIteOnMyTodo);
+button.addEventListener("click", addItemOnMyTodo);
 input.addEventListener("keypress", getInputValueEnter);
